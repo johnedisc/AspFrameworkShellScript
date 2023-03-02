@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 #Generate Directories
-mkdir -p $1.solution/$1/Controllers/ $1.solution/$1/Models/ $1.solution/$1/Views/ $1.solution/$1/wwwroot/
+mkdir -p $1.solution/$1/Controllers/ $1.solution/$1/Properties/ $1.solution/$1/Models/ $1.solution/$1/Views/ $1.solution/$1/wwwroot/
 cd $1.solution/
 mkdir -p $1.Tests/ModelTests
 
@@ -20,6 +20,9 @@ mv ToDoList.csproj $1.csproj
 cd Controllers/
 wget https://raw.githubusercontent.com/BrentHickman/ToDoList.Solution/main/ToDoList/Controllers/HomeController.cs
 sed -i "s/ToDoList/$1/g" HomeController.cs
+#Generate launch.json file
+cd Properties/
+wget https://raw.githubusercontent.com/BrentHickman/ToDoList.Solution/main/ToDoList/Properties/launchSettings.json
 #Generate Sample Model
 cd ../Models
 wget https://raw.githubusercontent.com/BrentHickman/ToDoList.Solution/main/ToDoList/Models/Item.cs
