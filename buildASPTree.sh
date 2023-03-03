@@ -7,9 +7,9 @@ mkdir -p $1.Tests/ModelTests
 
 #Generate Gitigonore and Readme
 touch .gitignore README.md
-cd $1/
 printf "bin\nobj\n" >> .gitignore
 
+cd $1/
 #Generate Program.cs
 wget https://raw.githubusercontent.com/BrentHickman/ToDoList.Solution/main/ToDoList/Program.cs
 sed -i "s/ToDoList/$1/g" Program.cs
