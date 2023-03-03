@@ -30,7 +30,7 @@ wget https://raw.githubusercontent.com/BrentHickman/ToDoList.Solution/main/ToDoL
 sed -i "s/ToDoList/$1/g" HomeController.cs
 
 #Generate launch.json file
-cd Properties/
+cd ../Properties/
 wget https://raw.githubusercontent.com/BrentHickman/ToDoList.Solution/main/ToDoList/Properties/launchSettings.json
 
 #Generate Sample Model
