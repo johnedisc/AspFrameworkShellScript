@@ -7,7 +7,7 @@ mkdir -p $1.Tests/ModelTests
 
 #Generate Gitigonore and Readme
 touch .gitignore README.md
-printf "bin\nobj\n" >> .gitignore
+printf "bin\nobj\n.vscode" >> .gitignore
 
 cd $1/
 #Generate Program.cs
